@@ -65,7 +65,7 @@ pipeline{
                     kubectl version --client
                     kubectl get nodes
                     kubectl set image deployment/discovery-svc \
-                        department-svc=${IMAGE_NAME}:${BUILD_NUMBER}
+                        discovery-svc=${IMAGE_NAME}:${BUILD_NUMBER}
                     kubectl rollout status deployment/discovery-svc
                 '''
             }
